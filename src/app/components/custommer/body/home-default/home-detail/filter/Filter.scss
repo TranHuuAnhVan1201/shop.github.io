@@ -1,0 +1,46 @@
+.filter {
+    padding: 10px 0;
+    background-color: #fff;
+}
+.filter .price {
+    margin-right: 20px;
+}
+
+.filter .fl {
+    float: left;
+    margin-right: 10px;
+}
+.filter .fl label {
+    color: #333;
+}
+
+.filter .price * {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 10px;
+    line-height: 40px;
+}
+
+.filter .feature {
+    position: relative;
+    margin-right: 30px;
+}
+.filter .criteria,
+.filter .selected {
+    display: inline-block;
+    overflow: hidden;
+    color: #288ad6;
+    cursor: pointer;
+    line-height: 40px;
+}
+.filter .barpage li {
+    line-height: 40px;
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+}
+.filter .barpage li a {
+    color: #288ad6;
+}
+/* filter */
+

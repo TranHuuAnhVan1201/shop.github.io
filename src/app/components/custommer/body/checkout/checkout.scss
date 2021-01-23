@@ -1,0 +1,134 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+}
+    .column {
+        width: calc(100% / 3);
+        padding: 1rem;
+        min-height: 100vh;
+    }
+        .column h2 {
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(34,36,38,.15);
+            margin-bottom: 20px;
+        }
+        .form-control {
+            margin-bottom: 5px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+            label {
+                font-weight: 400;
+                display: block;
+                margin-bottom: 5px;
+            }
+            .checkout input {
+                border: 2px solid #f0f0f0;
+                border-radius: 4px;
+                display: block;
+                width: calc(100% - 24px);
+                padding: 10px;
+                font-size: 14px;
+            }
+            input:focus {
+                    outline: 0;
+                    border-color: #777;
+                }
+            small {
+                color: var(--error-color);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                visibility: hidden;
+            }
+        .form-control.success input {
+            border-color: var(--success-color);
+        }
+
+        .form-control.error input {
+            border-color: var(--error-color);
+        }
+        .form-control.error small {
+            visibility: visible;
+        }
+    .sex {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }   
+        .sex > .form-control.radio {
+            width: 30%;
+        }
+        .sex > .form-control.radio input {
+            margin-right: 8px;
+        }
+        .form-control.radio {
+            display: flex;  
+            align-items: center;
+        }
+        .form-control.radio input {
+            width: 10%;
+        }
+    .wrap-order {
+        width: 100%;
+        font-size: 16px;
+    }
+        .products {
+            border: dotted #777 2px;
+        }
+        .wrap-order .dividing {
+            border-bottom: 2px solid #777;
+        }
+            .cols {
+                display: flex;
+                width: 95%;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                
+            }
+            .products .cols {
+                border-bottom: 1px solid #777;
+            }
+            .products .cols:last-child{
+                border-bottom: none;
+            }
+                .cols .left {
+                    font-weight: 800;
+                    color: black;
+                }
+                .sum .cols .left {
+                    font-size: 20px;
+                }
+                .sum .cols .right {
+                    color: #f30c28;
+                    font-weight: 600;
+                }
+            
+        
+
+
+    .submit.order {
+        display: block;
+        padding: 15px 20px;
+        width: 50%;
+        margin: 20px auto;
+        background-color: #FED101;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 10px;
+        border: unset;
+        cursor: pointer;
+    }
+    button.submit:focus,
+    button.submit:hover {
+        outline: none;
+        background-color: #288ad6;
+    }
+
+            
