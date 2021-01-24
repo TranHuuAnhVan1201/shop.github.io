@@ -106,6 +106,7 @@ li {
 .homepromo .owl-item {
     float: left;
     width: 240px;
+    padding-bottom: 10px;
 }
 
 .homepromo .item {

@@ -1,0 +1,14 @@
+.home-product #owl-promo {
+    border: 0;
+}
+    .home-product .owl-carousel .owl-warpper {
+        width: 1200px;
+        max-width: 1200px;
+        height: auto;
+    }
+        .owl-item {
+            border-bottom: 1px solid #eee;
+        }
+        .owl-item:last-child{
+            border-right: 1px solid #eee;
+        }

@@ -17,14 +17,7 @@ function Login(props) {
                         <small>Error message</small>
                     </div>
                 <button type="submit">Submit</button>
-                <div className="btn-login">
-                    <Link to="/" className="btn-back link">
-                        <i class="fas fa-long-arrow-alt-left">Back</i>
-                    </Link>
-                    <Link to="/register" className="btn-register link">
-                        <i class="fas fa-long-arrow-alt-right">Register</i>
-                    </Link> 
-                </div>
+                
                 </form>
            
         </div>

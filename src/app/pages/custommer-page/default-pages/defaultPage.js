@@ -14,9 +14,7 @@ function defaultPage() {
         <HashRouter>
             <ScrollToTop>
                 <React.Suspense>      
-                    
                     <Header></Header>
-
                     <Switch>
                         <Route path={"/"} exact component={homeDefault} />
                         <Route path={"/product"}  exact component={productDefault} />
