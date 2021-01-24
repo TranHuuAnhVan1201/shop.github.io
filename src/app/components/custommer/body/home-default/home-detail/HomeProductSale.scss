@@ -1,4 +1,5 @@
 
+
 #owl-promo {
     border: 3px solid #ba0953;
     width: calc(100% - 6px);
@@ -20,7 +21,7 @@
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
-    height: 351px;
+
     overflow: hidden;
 }
 
@@ -82,6 +83,9 @@ a.vertion2020 .heightlabel {
     margin: 5px 0 5px 5px;
     top: 10px;
     left: 5px;
+    max-width: 70px;
+    width: auto;
+    height: auto;
 }
 
 .homepromo .item:hover .item-carts{
@@ -125,6 +129,7 @@ a.vertion2020 .heightlabel {
     overflow: hidden;
     padding: 0 6px 0 0;
     max-height: 20px;
+    max-width: 80px;
 }
 .result-label .roundy {
     display: inline-block;
@@ -150,6 +155,8 @@ a.vertion2020 .heightlabel {
     margin-left: 3px;
 }
 .homepromo label.preorder {
+    text-align: center;
+    height: auto;
     background: #e91e63;
 }
 
@@ -173,6 +180,7 @@ a.vertion2020 .heightlabel {
     padding: 0 5px;
     height: 18px;
     line-height: 18px;
+    width: auto;
 }
 
 a.vertion2020 h3 {

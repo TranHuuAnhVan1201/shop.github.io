@@ -33,7 +33,6 @@ export default class Owl_Item extends Component {
         return slug;
     }
     render() {
-       
         return (
              <li className="owl-item">
                 <div className="item" data-index={1}>

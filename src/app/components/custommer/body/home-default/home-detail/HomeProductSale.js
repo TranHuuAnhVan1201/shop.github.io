@@ -7,9 +7,8 @@ import Owl_Item_Star from './../../product/Ow_Item_Star'
 import './HomeProductSale.scss';
 export default class HomeProductSale extends Component {
     render() {
-       
         return (
-            <div>
+            <div class="product-top">
                 <section className="homeproductsale" >
                     <div id="owl-promo" className="owl-promo owl-carousel homepromo item2020  owl-theme">
                         <div className="owl-wrapper-outer">

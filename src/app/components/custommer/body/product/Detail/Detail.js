@@ -148,8 +148,8 @@ export default class Detail extends Component {
                         </div>
                         </div>
                         <div className="area_order area_orderM">
-                        <a href="/banner" className="buy_now">
-                            <b>Liên hệ với chúng tôi</b>
+                        <a href="/carts" className="buy_now">
+                            <b>Đặt hàng</b>
                             <span>Giao hàng tận nơi hoặc nhận tại cửa hàng</span>
                         </a>
                         <a id="tra-gop" className="buy_repay " href="/tra-gop/may-tinh-bang/huawei-matepad-t8">
