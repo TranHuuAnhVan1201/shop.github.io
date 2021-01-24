@@ -2,6 +2,8 @@
 import React, { Component } from 'react'
 import Owl_Item from '../../product/Owl_Item'
 import dataProduct from './../../../../../database/dataProduct.json'
+import Owl_Item_Star from './../../product/Ow_Item_Star'
+
 import './HomeProductSale.scss';
 export default class HomeProductSale extends Component {
     render() {
@@ -12,6 +14,7 @@ export default class HomeProductSale extends Component {
                     <div id="owl-promo" className="owl-promo owl-carousel homepromo item2020  owl-theme">
                         <div className="owl-wrapper-outer">
                             <div className="owl-warpper" style={{ left: 0, display: 'block', transition: 'all 0ms ease 0s', transform: 'translate3d(0px, 0px, 0px)'}}>
+                                <Owl_Item_Star/>
                                 {
                                     dataProduct.map((value, key) => {
                                         return (

@@ -38,7 +38,7 @@ export default class Owl_Item extends Component {
              <li className="owl-item">
                 <div className="item" data-index={1}>
                     <Link to={"/detail/" + this.convertSlug(this.props.item_Title) + "." + this.props.idProduct} className="vertion2020 large">
-                        <div className="heightlabel">Trả góp 0%</div>
+                        <div className="heightlabel">Trả góp 0%</div>   
                         <Link to="/carts" className="item-carts">
                             <i class="fas fa-cart-plus"></i>
                         </Link>

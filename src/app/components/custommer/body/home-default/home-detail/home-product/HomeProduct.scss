@@ -1,5 +1,6 @@
 .home-product #owl-promo {
-    border: 0;
+    border: none;
+    width: 100%;
 }
     .home-product .owl-carousel .owl-warpper {
         max-width: 1200px;
@@ -7,12 +8,6 @@
         height: auto;
         width: 100%;
     }
-        .owl-item {
-            border-bottom: 1px solid #eee;
-        }
-        .owl-item:last-child{
-            border-right: 1px solid #eee;
-        }
     .home-product .owl-controls {
         display: none;
         visibility: hidden;

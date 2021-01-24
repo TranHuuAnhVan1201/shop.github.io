@@ -1,3 +1,4 @@
+
 #owl-promo {
     border: 3px solid #ba0953;
     width: calc(100% - 6px);
@@ -49,23 +50,18 @@
 
 .homepromo .owl-item {
     float: left;
-    width: 240px;
-    padding-bottom: 10px;
+    width: 238px;
+    height: 474px;
+    padding: 0; 
+    border: 1px solid#eee;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .homepromo .item {
     position: relative;
-    overflow: hidden;
-    border-left: 1px solid #eee;
-    border-right: 0;
-    cursor: pointer;
 }
 
-
-
-a.vertion2020 {
-    padding: 10px 0;
-}
 
 a.vertion2020 .heightlabel {
     overflow: hidden;
@@ -84,7 +80,8 @@ a.vertion2020 .heightlabel {
     border-radius: 3px;
     padding: 0 5px 0 8px;
     margin: 5px 0 5px 5px;
-    
+    top: 10px;
+    left: 5px;
 }
 
 .homepromo .item:hover .item-carts{
@@ -299,7 +296,7 @@ a.vertion2020 .promo {
 
 .item2020 a.vertion2020 .ratingresult {
     padding: 0;
-    margin: 5px 10px 0;
+    margin: 5px 10px 10px;
 }
 
 .item2020 a.vertion2020 .ratingresult i.icontgdd-ystar {
