@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import Owl_Item from '../../product/Owl_Item'
 import dataProduct from './../../../../../database/dataProduct.json'
+import './HomeProductSale.scss';
 export default class HomeProductSale extends Component {
     render() {
        

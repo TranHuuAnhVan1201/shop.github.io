@@ -2,9 +2,10 @@
     border: 0;
 }
     .home-product .owl-carousel .owl-warpper {
-        width: 1200px;
         max-width: 1200px;
+        min-width: 1024px;
         height: auto;
+        width: 100%;
     }
         .owl-item {
             border-bottom: 1px solid #eee;
@@ -12,3 +13,8 @@
         .owl-item:last-child{
             border-right: 1px solid #eee;
         }
+    .home-product .owl-controls {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
