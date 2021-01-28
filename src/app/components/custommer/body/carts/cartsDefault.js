@@ -49,10 +49,10 @@ function cartsDefault(props) {
                 </div>
                 <div className="btn-carts">
                     <Link to="/" className="btn-back link">
-                        <i class="fas fa-long-arrow-alt-left"></i>Tiếp tục mua sắm
+                        <i className="fas fa-long-arrow-alt-left"></i>Tiếp tục mua sắm
                     </Link>
                     <Link to="/checkout" className="btn-checkout link">
-                        <i class="fas fa-long-arrow-alt-right"></i> Thanh toán
+                        <i className="fas fa-long-arrow-alt-right"></i> Thanh toán
                     </Link>
                 
                 </div>

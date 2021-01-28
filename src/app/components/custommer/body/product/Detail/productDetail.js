@@ -11,14 +11,7 @@ export default class ProductDetail extends Component {
                         if(value.id === parseInt(this.props.match.params.id))
                             return (
                                 <Detail
-                                    key={key}
-                                    idRelated={value.id}
-                                    categoryBeadcrumb={value.categoryBeadcrumb}
-                                    companyBeadcrumb={value.companyBeadcrumb}
-                                    pictures={value.pictures}
-                                    price={value.price}
-                                    priceSale={value.priceSale}
-                                    title = {value.item_Title}
+                                    value={value} key={key} index={key}
                                 />
                                 
                             )

@@ -28,7 +28,7 @@ function Filter(props) {
                 
             </div>
             <div className="fl feature">
-                <span class="criteria">Bộ lọc</span>
+                <span className="criteria">Bộ lọc</span>
             </div>
             <div className="fl barpage">
                 <li>

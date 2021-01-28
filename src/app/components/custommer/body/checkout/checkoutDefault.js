@@ -19,33 +19,33 @@ function checkoutDefault(props) {
                                 <label htmlFor="female">Chị</label>
                             </div>
                         </div>
-                        <div class="form-control">
+                        <div className="form-control">
                             <label for="fullName">Họ và tên</label>
                             <input type="text" id="fullName" placeholder="Nhập họ và tên"/>
                             <small>Error message</small>
                         </div>
-                        <div class="form-control">
+                        <div className="form-control">
                             <label for="phone">Số điện thoại</label>
                             <input type="text" id="phone" placeholder="Nhập số điện thoại" />
                             <small>Error message</small>
                         </div>
 
-                        <div class="form-control">
+                        <div className="form-control">
                             <label for="address">Địa chỉ</label>
                             <input type="text" id="address" placeholder="Nhập địa chỉ chi tiết" />
                             <small>Error message</small>
                         </div>
-                        <div class="form-control">
+                        <div className="form-control">
                             <label for="city">Tỉnh / Thành phố</label>
                             <input type="text" id="city" placeholder="Nhập địa Tỉnh / Thành phố" />
                             <small>Error message</small>
                         </div>
-                        <div class="form-control">
+                        <div className="form-control">
                             <label for="district">Quận / Huyện</label>
                             <input type="text" id="district" placeholder="Nhập địa chỉ Quận / Huyện" />
                             <small>Error message</small>
                         </div>
-                        <div class="form-control">
+                        <div className="form-control">
                             <label for="ward">Phường / Xã</label>
                             <input type="text" id="ward" placeholder="Nhập địa chỉ Phường / Xã" />
                             <small>Error message</small>
@@ -54,7 +54,7 @@ function checkoutDefault(props) {
                     </div>
                     <div className="column dividing">
                         <h2>Vận chuyển</h2>
-                        <div class="form-control">
+                        <div className="form-control">
                             <label for="dividing">Chọn phương thức vận chuyển</label>
                             <input type="text" id="dividing" placeholder="Chọn phương thức vận chuyển"/>
                             <small>Error message</small>

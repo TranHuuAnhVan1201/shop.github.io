@@ -1,0 +1,20 @@
+.home-product .homepromo .owl-item.star {
+    visibility: visible;
+    opacity: 1;
+    display: unset;
+}
+.home-product #owl-promo {
+    border: none;
+    width: 100%;
+}
+    .home-product .owl-carousel .owl-warpper {
+        max-width: 1200px;
+        min-width: 1024px;
+        height: auto;
+        width: 100%;
+    }
+    .home-product .owl-controls {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }

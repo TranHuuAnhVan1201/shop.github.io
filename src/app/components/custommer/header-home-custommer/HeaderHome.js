@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './scss/header.scss'
+import './scss/Header.scss'
+import * as actions from './../../../actions/custommer/products/Product';
+import { useDispatch } from 'react-redux';
+
 function Header(props) {
+    const dispatch = useDispatch();
+    const onNumber = (num) => {
+        dispatch(actions.IdTest(num));
+    }
+
     return (
         <header>
             <div className="wrap-main">
@@ -10,15 +18,15 @@ function Header(props) {
                         <Link to="/">LaptopNCT</Link>
                     </li>
                     <form id="search-site" action="/tim-kiem" method="GET">
-                        <input type="text" name="key" id="search-keyword" class="topinput" aria-label="Bạn tìm gì..."  placeholder="Bạn cần tìm Laptop gì ?" defaultValue=""/>
-                        <button class="btntop" type="submit">
-                            <i class="fas fa-search"></i>
+                        <input type="text" name="key" id="search-keyword" className="topinput" aria-label="Bạn tìm gì..."  placeholder="Bạn cần tìm Laptop gì ?" defaultValue=""/>
+                        <button className="btntop" type="submit">
+                            <i className="fas fa-search"></i>
                         </button>
                     </form>
                     <div className="menu-info">
                         <li className="carts" id="carts">
                             <Link to="/carts">
-                                <i class="roundy">1</i>
+                                <i className="roundy">1</i>
                                 <span>Giỏ hàng</span>
                             </Link>
                         </li>
@@ -28,7 +36,7 @@ function Header(props) {
                             <li><Link to="/pay">Trả góp</Link></li>
                             <li><Link to="/contact">Liên hệ</Link></li>
                             <li><Link to="/new">Tin tức</Link></li>
-                            <li><Link to="/phone">HOTLINE: 0972 197 029</Link></li>
+                            <li><Link to="/logintest">HOTLINE: 0972 197 029</Link></li>
                         </div>
                     </div>
                 </nav>
@@ -37,7 +45,8 @@ function Header(props) {
             <div className="wrap-nav">
                 <nav>
                     <li>
-                        <Link to="/gamingrender">Gaming Render</Link>
+                        
+                        <button type="button" className="btn btn-danger" onClick={() => onNumber(1)}>button t</button>
                     </li>
                     <li>
                         <Link to="/ultralbook">Ultralbook</Link>

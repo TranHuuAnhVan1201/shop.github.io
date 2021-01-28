@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
-@import './../../../../scss/custom.css';
-
 :root {
   --success-register: #2ecc71;
   --error-register: #e74c3c;
@@ -16,11 +12,13 @@ body {
   margin: 0;
 }
 
-.container {
+.container,
+.register {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   width: 400px;
+  overflow: hidden;
 }
 
 h2 {
@@ -58,11 +56,12 @@ h2 {
   border-color: #777;
 }
 
+
 .form-control.success input {
   border-color: var(--success-register);
 }
 
-.form-control.error input {
+.form-control.error input{
   border-color: var(--error-register);
 }
 
@@ -78,7 +77,8 @@ h2 {
   visibility: visible;
 }
 
-.form button {
+.form button,
+.btn-link {
   cursor: pointer;
   background-color: #3498db;
   border: 2px solid #3498db;
@@ -89,4 +89,22 @@ h2 {
   padding: 10px;
   margin-top: 20px;
   width: 100%;
+}
+
+button a {
+  color: #FFF !important;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.btn-link {
+  margin-top: 0;
+  width: 40%;
+  background-color: var(--success-register);
 }

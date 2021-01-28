@@ -96,8 +96,6 @@ li {
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
-
-    overflow: hidden;
 }
 
 .item2020 {
@@ -126,7 +124,9 @@ li {
 
 .homepromo .owl-item {
     float: left;
-    width: 238px;
+    width: 240px;
+    box-sizing: border-box;
+    max-width: 20%;
     height: 474px;
     padding: 0; 
     border: 1px solid#eee;

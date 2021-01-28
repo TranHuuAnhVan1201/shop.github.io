@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "username": "bhanhvan1201",
+        "password": "anhvan234",
+        "permission": "admin"
+    },
+    {
+        "id": 2,
+        "username": "bhanhvan1203",
+        "password": "anhvan234",
+        "permission": "ctv"
+    }
+]

@@ -45,10 +45,10 @@ function Banner(props) {
                     </div>
                 </div>
                 <div className="right">
-                    <Link to="/intel-11" class="right-height80">
+                    <Link to="/intel-11" className="right-height80">
                         <img src={imgRight390x80}></img>
                     </Link>
-                    <Link to="/windowns-10-ban-quyen" class="right-height80">
+                    <Link to="/windowns-10-ban-quyen" className="right-height80">
                         <img src={imgRight390x802}></img>
                     </Link>
                 </div>
