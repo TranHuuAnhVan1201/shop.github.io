@@ -1,17 +1,21 @@
-import *as type from './../../../constants/ActionType';
+import *as types from './../../../constants/ActionType';
 
-var initialStage = {};
+const init = JSON.parse(localStorage.getItem('IDName')) || [];
 
-var myReducer = (state = initialStage, action) => {
+var myReducer = (state = init, action) => {
     switch (action.type) {
-        case type.ID:
+        case types.ID:
             state = {
                 id: action.id
             }
-            return state;
-
+            localStorage.setItem('IDName', JSON.stringify(state));
+            return {
+                ...state
+            };
         default:
             return state;
-    }
+    };
+    
 }
+
 export default myReducer;

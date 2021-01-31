@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import './HomeProduct.scss'
-import *as actions from './../../../../../../actions/custommer/products/Product'
+import './ProductDefault.scss';
+import *as actions from '../../../../../../../actions/custommer/products/Product';
+
 
 function convertToSlug(slug) {
     return slug
@@ -14,18 +15,28 @@ function convertToSlug(slug) {
 
 function HomeProduct(props) {
     const databaseRedux = useSelector(state => state.GetProduct);
+    console.log(databaseRedux);
     const dispatch = useDispatch();
     useEffect(() => {
         onGetProduct();
+       
     }, []);
     const onGetProduct = () => {
         dispatch(actions.getProduct());
     }
+    const addProduct = (item) => {
+        dispatch(actions.addProductToCart(item));
+    }
+    const getIDName = (item) => {
+        dispatch(actions.IDName(item));
+    }
     
+   
     return (
         <div className="home-product">
+            
             <div className="product-top">
-                <section className="homeproductsale">
+                <section className="homeproductsale product-star">
                     <div
                         id="owl-promo"
                         className="owl-promo owl-carousel homepromo item2020  owl-theme"
@@ -41,21 +52,25 @@ function HomeProduct(props) {
                                 }}
                             >
                                 {databaseRedux.map((value, key) => {
-                                    if (value.id === 1) {
+                                    if (value.id < 10) {
                                         return (
-                                            <li className="owl-item star">
-                                                <div className="item" data-index={1}>
-                                                    <Link to={"/detail/" + convertToSlug(value.title) + "." + value.id} className="vertion2020 large">
+                                            <li className={"owl-item" + ((value.id === 1) ? " star" : "")} id={value.id} key={key}>
+                                                <div className="item">
+                                                    <Link to={"/product-detail/" + convertToSlug(value.title) + "." + value.id} onClick={() => getIDName(value)} className="vertion2020 large">
+
+                                                        <div class="label-top">
+                                                            <div className="heightlabel">Trả góp 0%</div>
+                                                            
+                                                        
+                                                            <Link to="/carts" className="item-carts">
+                                                                <i className="fas fa-cart-plus" onClick={() => addProduct(value)}></i>
+                                                            </Link>
+
+                                                       </div>
 
 
-                                                        <Link to="/carts" className="item-carts">
-                                                            <i className="fas fa-cart-plus"></i>
-                                                        </Link>
-
-
-
-                                                        <img src={value.url} className="imgStar" alt={value.picAlt} />
-                                                        <div className="textStar">
+                                                        <img src={value.url} className="img-default" alt={value.picAlt} />
+                                                        <div className="text-star">
                                                             <div>
                                                                 <div className="result-label sale">
                                                                     <i className="roundy">%</i>
@@ -104,14 +119,11 @@ function HomeProduct(props) {
                                                     </Link>
                                                 </div>
                                             </li>
+                                            
                                         );
-                                        
                                     }
-                                
-                                    
-
-                                })    
                                 })
+                                }
 
                             </div>
                             <div className="clr" />

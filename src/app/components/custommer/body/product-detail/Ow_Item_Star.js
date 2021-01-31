@@ -18,7 +18,7 @@ function Ow_Item_Star(props) {
             <div className="item" data-index={1}>
                 <Link to={"/detail/" + convertToSlug(value.item_Title) + "." + value.id } className="vertion2020 large">
                    
-
+                   {/* carts */}
                     <Link to="/carts" className="item-carts">
                         <i className="fas fa-cart-plus"></i>
                     </Link>

@@ -1,12 +1,14 @@
 import React from 'react';
 import Banner from './home-detail/banner/Banner';
 import Filter from './home-detail/filter/Filter';
+import FilterLaptop from './home-detail/FilterLaptop/FilterLaptop';
 import Need from './home-detail/need/Need';
 import TitlePictures from './home-detail/TitlePictures';
-import HomeProductSale from './home-detail/HomeProductSale'
-import HomeProduct from './home-detail/home-product/HomeProduct';
-import HomeProductRedux from './home-detail/home-product-redux/HomeProduct';
-import FilterLaptop from './home-detail/FilterLaptop/FilterLaptop';
+import ProductBestSale from './home-detail/product/product-best-sale/ProductBestSale';
+import ProductDefault from './home-detail/product/product-default/ProductDefault'
+
+
+
 function homeDefault(props) {
     return (
         <section>
@@ -14,10 +16,11 @@ function homeDefault(props) {
             <Filter/>
             <Need/>
             <TitlePictures />
-            <HomeProductSale />
-            <FilterLaptop/>
-            <HomeProduct/>
-            <HomeProductRedux/>
+            <ProductBestSale/>
+            <FilterLaptop />
+            <ProductDefault/>
+           
+           
         </section>
     );
 }

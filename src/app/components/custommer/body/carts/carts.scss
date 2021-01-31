@@ -46,12 +46,12 @@
                 
                 tbody tr > td {
                     min-height: 100px;
-                    height: 100px;
-                    max-height: 100px;
                     overflow: hidden;
                     border: 1px solid rgba(34,36,38,.1);
                     padding: 10px;
+                    position: relative;
                 }
+                
                 tbody tr > td:nth-child(2) {
                     text-align: left;
                 }
@@ -59,6 +59,15 @@
                 tbody tr > td:nth-child(5) {
                     text-align: right;
                 }
+                tbody tr > td.td-group {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;             
+                }
+                    tbody tr > td.td-group td {
+                        width: 20%;
+                    }
 
             tfoot {
                 height: 100px;

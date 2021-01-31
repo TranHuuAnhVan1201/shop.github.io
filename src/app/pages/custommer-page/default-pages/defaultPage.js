@@ -5,8 +5,8 @@ const Header = React.lazy(() => import('../../../components/custommer/header-hom
 
 const FooterHome = React.lazy(() => import('../../../components/custommer/footer-home-custommer/FooterHome'));
 const homeDefault = React.lazy(() => import('../../../components/custommer/body/home-default/HomeDefault'));
-const productDetail = React.lazy(() => import('../../../components/custommer/body/product/Detail/productDetail'));
-const cartsDefault = React.lazy(()=> import('../../../components/custommer/body/carts/cartsDefault'))
+const ProductDetail = React.lazy(() => import('../../../components/custommer/body/product-detail/ProductDetail'))
+const cartsDefault = React.lazy(()=> import('../../../components/custommer/body/carts/CartsDefault'))
 const checkoutDefault = React.lazy(()=> import('../../../components/custommer/body/checkout/checkoutDefault'))
 function defaultPage() {
     return (
@@ -16,8 +16,7 @@ function defaultPage() {
                     <Header></Header>
                     <Switch>
                         <Route path={"/"} exact component={homeDefault} />
-
-                        <Route path={"/detail/:slug.:id"} exact component={productDetail} />
+                        <Route path={"/product-detail/:slug.:id"} exact component={ProductDetail} />
                         <Route path={"/carts"}  exact component={cartsDefault} />
                         <Route path={"/checkout"}  exact component={checkoutDefault} />
                     </Switch>

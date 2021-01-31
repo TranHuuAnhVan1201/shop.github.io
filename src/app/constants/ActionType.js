@@ -1,3 +1,6 @@
 export const ID = 'ID';
-export const GETID = 'GETID';
 export const GETPRODUCT = 'GETPRODUCT';
+export const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART';
+export const DELETE_CART = 'DELETE_CART';
+export const INCREASE_QUANTITY = 'INCREASE_QUANTITY';
+export const DECREASE_QUANTITY = 'DECREASE_QUANTITY';

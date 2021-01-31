@@ -2,13 +2,10 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import './scss/Header.scss'
 import * as actions from './../../../actions/custommer/products/Product';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Header(props) {
-    const dispatch = useDispatch();
-    const onNumber = (num) => {
-        dispatch(actions.IdTest(num));
-    }
+    const setNumberCarts = useSelector(state => state.GetCarts);
 
     return (
         <header>
@@ -26,7 +23,7 @@ function Header(props) {
                     <div className="menu-info">
                         <li className="carts" id="carts">
                             <Link to="/carts">
-                                <i className="roundy">1</i>
+                                <i className="roundy">{setNumberCarts.numberCart}</i>
                                 <span>Giỏ hàng</span>
                             </Link>
                         </li>
@@ -45,8 +42,7 @@ function Header(props) {
             <div className="wrap-nav">
                 <nav>
                     <li>
-                        
-                        <button type="button" className="btn btn-danger" onClick={() => onNumber(1)}>button t</button>
+                        <Link to="/ultralbook">Gaming Render</Link>
                     </li>
                     <li>
                         <Link to="/ultralbook">Ultralbook</Link>
