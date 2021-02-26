@@ -12,17 +12,15 @@ function USER(props) {
     const [edit, setEdit] = useState([]);
     const [add, setADD] = useState([]);
     const [submitted, setSubmitted] = useState(false);
-    const [show, setShow] = useState({
-        showEDIT: false,
-        showADD: false
-    });
+    const [showFormADD, setShowFormADD] = useState(false);
+    const [showFormEDIT, setShowFormEDIT] = useState(false);
     const [currentpage, setCurrentpage] = useState(1);
     // biến postperpage này như size dị...
     //ví dụ danh sách 10 phần tử cho nó là 2 thì hiển thị danh sách 2 còn 8 phần tử kia phần trang ra 1,2,3,4,5 
     //gồm 5 trang hỏng tin thử đi
     
     //trang có bao nhiêu phần tử.
-    const [postperpage, setPostperpage] = useState(2);
+    const [postperpage, setPostperpage] = useState(5);
     // biến totalPages này để set mảng chứa số trang bị cắt 1 2 3
     
     // số lượng trang.
@@ -72,10 +70,14 @@ function USER(props) {
         getUser();
     }
     function handleClickEDIT(id, value) {
-        setShow({...show,showEDIT: true});
+        setShowFormEDIT(true);
+        setShowFormADD(false);
         setEdit(value);
     }
-
+    function handleClickADD(event) {
+        setShowFormADD(true);
+        setShowFormEDIT(false);
+    }
     function handleChange(event) {
         const { name, value } = event.target;
         console.log(edit);
@@ -101,8 +103,11 @@ function USER(props) {
             setCurrentpage(page);
         }, 1000);
     }
-
-    console.log(totalPages);
+    function handleCancel() {
+        setSubmitted(false);
+        setShowFormADD(false);
+        setShowFormEDIT(false);
+    }
     return (
         <section className="home-admin">
             <div className="home-left">
@@ -113,7 +118,7 @@ function USER(props) {
             </div>
             <div className="home-user home-right">
                 <div className="col-12">
-                    <span className="btn add">Thêm tài khoản</span>
+                    <span className="btn add" onClick={handleClickADD}>Thêm tài khoản</span>
                 </div>
                 <div className="col-12">
                     <div className="table">
@@ -135,7 +140,7 @@ function USER(props) {
                                             return (
                                                 <tr key={key}>
                                                     <td>{value.id}</td>
-                                                    <img src={value.avatar} alt={123} />
+                                                    <td><img src={value.avatar} alt={123} /></td>
                                                     <td>{value.name}</td>
                                                     <td>{value.createdAt}</td>
                                                     <td className="td-group">
@@ -152,22 +157,24 @@ function USER(props) {
                         </table>
                         <Pagination onAddPage={onAddPage} totalPages={totalPages} />
                     </div>
-                    <div className="col-4 perform show" >
-                        <form className={"form-add show" + (submitted && show.showADD ? ' is-invalid' : ' ')}  onSubmit={handleSubmitADD}>
+                    <div className={"col-4 form" + (showFormEDIT || showFormADD ? '' : ' is-invalid')}>
+                        <form className={"form-add show" + (showFormADD ? ' ' : ' is-invalid')}  onSubmit={handleSubmitADD}>
                             <h2>ADD USER</h2>
                             <input type="text" name="id" value={add.id} onChange={handleChangeADD} placeholder="Enter Username"></input>
                             <input type="text" name="url" value={add.url} onChange={handleChangeADD} placeholder="Enter IMG Name"></input>
                             <input type="text" name="name" value={add.name} onChange={handleChangeADD} placeholder="Enter FULL Name"></input>
                             <input type="text" name="createdAt" value={add.createdAt} onChange={handleChangeADD} placeholder="Enter CREATED"></input>
                             <button className="submit">SUBMIT ADD</button>
+                            <button className="submit" onClick={handleCancel}>Cancel</button>
                         </form>
-                        <form className={"form-edit show" + (submitted && show.clickEDIT ? ' is-invalid' : ' ')} onSubmit={handleSubmitEDIT}>
+                        <form className={"form-edit show" + (showFormEDIT ? ' ' : ' is-invalid')} onSubmit={handleSubmitEDIT}>
                             <h2>EDIT USER</h2>
                             <input type="text" name="id" value={edit.id} onChange={handleChange} placeholder="Enter Username"></input>
                             <input type="text" name="url" value={edit.url} onChange={handleChange} placeholder="Enter IMG Name"></input>
                             <input type="text" name="name" value={edit.name} onChange={handleChange} placeholder="Enter FULL Name"></input>
                             <input type="text" name="createdAt" value={edit.createdAt} onChange={handleChange} placeholder="Enter CREATED"></input>
                             <button className="submit" >SUBMIT EDIT</button>
+                            <button className="submit" onClick={handleCancel}>Cancel</button>
                         </form>
                     </div>
                 </div>  

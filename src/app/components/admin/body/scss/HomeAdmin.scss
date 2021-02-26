@@ -22,33 +22,83 @@
             margin-bottom: 10px;
             .table {
                 width: 100%;
+                border: 2px solid #eee;
                 table.col-auto {
                     width: 100%;
                     text-align: center;
-                    border: 1px solid #eee;
                     thead,
                     tbody{
                         tr {
                             height: 50px;
-                            th {
-                                border-right: 1px solid #eee !important;
-                            }
-                            th:last-child {
-                                border-right: none;
-                            }
                         } 
                     }
-                    tbody tr {
-                        
-                    }
-                    tbody tr td{
+                    tbody tr{
                         height: 40px;
-                        border-top: 1px solid red;
                     }
+                }
+                table, th, tr, td {
+                    border-spacing: 0;
+                }
+                th, tr , td {
+                    max-width: 25%;
+                    border-bottom: 2px solid #eee;
+                    border-right: 2px solid #eee;
+                }
+                th:last-child, tr:last-child, td:last-child {
+                    border-right: none;
+                }
+                td img {
+                    max-width: 20%;
+                }
+                img {
+                    display: block;
+                    overflow: hidden;
+                    max-width: 10%;
+                    object-fit: cover;
+                    margin: 0 auto;
                 }
             }
             .col-4 {
                 width: 33%;
+            }
+            .col-4.form {
+                box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+                margin-bottom: 10px;
+                
+                h2 {
+                    height: 48px;
+                    line-height: 48px;
+                    text-align: center;
+                    border: 2px solid #eee;              
+                }
+                input {
+                    display: block;
+                    width: 90%;
+                    margin: 0 auto;
+                    height: 36px;
+                    padding: 0 10px;
+                }
+                button.submit {
+                    display: block;
+                    width: 90%;
+                    margin: 10px auto 0;
+                    padding: 10px 10px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background: #288ad6;
+                    color: white;
+                    font-weight: 600;
+                }
+                button.submit:last-child {
+                    background: #FED101;
+                    color: black;
+                }
             }
         }    
     }    

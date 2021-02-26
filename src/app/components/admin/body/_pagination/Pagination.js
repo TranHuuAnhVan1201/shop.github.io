@@ -6,7 +6,7 @@ function Pagination(props) {
     return (
         <nav className="navigation">
             <ul className="pagination">
-                {
+                {   
                     totalPages.map.length > 0 ? totalPages.map((value, key) => {
                         return (
                             <li onClick={() => onAddPage(value.item)} className="page-item">
