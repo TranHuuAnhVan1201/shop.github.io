@@ -1,7 +1,6 @@
 import *as types from './../../../constants/ActionType';
 
 const init = JSON.parse(localStorage.getItem('IDName')) || [];
-
 var myReducer = (state = init, action) => {
     switch (action.type) {
         case types.ID:

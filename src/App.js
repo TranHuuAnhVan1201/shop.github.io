@@ -5,6 +5,7 @@ const defaultPage = React.lazy(() => import('./app/pages/custommer-page/default-
 const LoginPage = React.lazy(() => import('./app/pages/login-page/LoginPage'));
 const LoginTestPage = React.lazy(() => import('./app/components/register/login/Login'));
 const Register = React.lazy(() => import('./app/components/register/register/Register'));
+const AdminRouter = React.lazy(() => import('./app/components/admin/AdminRouter'));
 
 const loading = (
   <div className="pt-3 text-center">
@@ -24,7 +25,9 @@ function App() {
             <Route path={"/login"} exact component={LoginPage} />
             <Route path={"/loginTest"} exact component={LoginTestPage} />
             <Route path={"/register"} exact component={Register} />
-            <Route path="/" component={defaultPage} />
+            <Route path={"/admin"} component={AdminRouter} />
+            <Route path={"/"} component={defaultPage} />
+           
 
             <LoginTestPage check={()=> checkConnect()} />
           </Switch>

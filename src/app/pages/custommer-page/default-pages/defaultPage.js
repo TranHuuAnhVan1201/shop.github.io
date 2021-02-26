@@ -2,7 +2,6 @@ import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import ScrollToTop from 'react-router-scroll-top';
 const Header = React.lazy(() => import('../../../components/custommer/header-home-custommer/HeaderHome'));
-
 const FooterHome = React.lazy(() => import('../../../components/custommer/footer-home-custommer/FooterHome'));
 const homeDefault = React.lazy(() => import('../../../components/custommer/body/home-default/HomeDefault'));
 const ProductDetail = React.lazy(() => import('../../../components/custommer/body/product-detail/ProductDetail'))

@@ -1,7 +1,6 @@
 import *as types from './../../../constants/ActionType';
 const init = { numberCart: 0, items: [] }
 var myReducer = (state = init, action) => {
-    console.log(state);
     switch (action.type) {
         case types.ADD_PRODUCT_TO_CART:
             if (state.numberCart === 0) {
@@ -43,8 +42,6 @@ var myReducer = (state = init, action) => {
         case types.INCREASE_QUANTITY:
             state.numberCart++;
             state.items[action.payload].quantity++;
-            console.log(state);
-
             return {
                 ...state
             };

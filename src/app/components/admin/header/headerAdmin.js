@@ -1,11 +1,12 @@
 import React from 'react';
+import './HeaderAdmin.scss';
 
-function headerAdmin(props) {
+function HeaderAdmin(props) {
     return (
         <div>
-            
+            <h1>header amdmin</h1>
         </div>
     );
 }
 
-export default headerAdmin;
+export default HeaderAdmin;

@@ -14,12 +14,14 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.3.2",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "core-js": "^3.8.1",
     "enzyme": "^3.11.0",
     "ngx-scrolltop": "^2.3.0",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
+    "query-string": "^6.13.8",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
     "react-dom": "^17.0.1",
@@ -56,4 +58,5 @@
       "last 1 safari version"
     ]
   }
+  
 }

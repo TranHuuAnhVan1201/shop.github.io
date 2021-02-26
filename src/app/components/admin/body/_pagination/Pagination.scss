@@ -1,0 +1,29 @@
+.navigation {  
+    height: 40px;
+    line-height: 40px;
+    ul.pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        li.page-item {
+            height: 38px;
+            width: 38px;
+            border: 1px solid black;
+            text-align: center;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        li.page-item:hover {
+            background: #288ad6;
+            a {
+                color: white;
+            }
+        }
+        li.page-item:first-child,
+        li.page-item:last-child {
+            width: auto;
+            padding: 0 20px;
+        }
+    }
+}
