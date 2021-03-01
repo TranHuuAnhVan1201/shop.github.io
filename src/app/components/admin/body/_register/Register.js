@@ -1,23 +1,16 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/register.css';
 
 function Register(props) {
-    const api = axios.create({
-        baseURL: `http://phucnb-django-example.herokuapp.com/api/user/registration`
-    })
-    const createUser = async () => {
-        let res = await api.post('/', register);
-    }
     const [register, setRegister] = useState({
         username: "",
         password: "",
-        name: ""
+        passwordConfirm: "",
+        email: ""
     });
     const [submitted, setSubmitted] = useState(false);
-    const { username, password, name } = register;
-    function handleChangeRegister(event){
+    const { username, password, passwordConfirm, email } = register;
+    function handleChangeRegister(event) {
         const { name, value } = event.target;
         setRegister(register => ({ ...register, [name]: value }));
     }
@@ -25,11 +18,9 @@ function Register(props) {
     function handleSubmitRegister(event) {
         event.preventDefault();
         setSubmitted(true);
-       
-        if (username && password && name) {
-            setRegister(register);
-            alert('submit register thanh cong');
-            createUser();
+
+        if (username && password && passwordConfirm && email) {
+            alert("submit thanh cong");
         }
     }
     return (
@@ -46,24 +37,24 @@ function Register(props) {
                     <input name="password" value={password} onChange={handleChangeRegister} type="password" id="password" placeholder="Enter password" />
                     <small>Error message</small>
                 </div>
-                {/* <div className={"form-control" + ((submitted && !passwordConfirm) ? " error" : " ")} style={{display: 'none'}}>
+                <div className={"form-control" + ((submitted && !passwordConfirm) ? " error" : " ")}>
                     <label htmlFor="passwordConfirm">Confirm Password</label>
                     <input name="passwordConfirm" value={passwordConfirm} onChange={handleChangeRegister} type="password" id="passwordConfirm" placeholder="Enter password again" />
                     <small>Error message</small>
-                </div> */}
-                <div className={"form-control" + ((submitted && !name) ? " error" : " ")} >
-                    <label htmlFor="name">Name</label>
-                    <input name="name" value={name} onChange={handleChangeRegister} type="text" id="name" placeholder="Enter Name" />
-                    <small>Error Name</small>
+                </div>
+                <div className={"form-control" + ((submitted && !email) ? " error" : " ")} >
+                    <label htmlFor="email">Email</label>
+                    <input name="email" value={email} onChange={handleChangeRegister} type="text" id="email" placeholder="Enter email" />
+                    <small>Error message</small>
                 </div>
                 <button type="submit">Submit</button>
-                
+
             </form>
 
-            <div class="group" style={{display: 'none'}}>
+            <div class="group">
                 <Link to="/" className="btn-link">Back</Link>
                 <Link to="/logintest" className="btn-link">Login</Link>
-                
+
             </div>
 
         </div>

@@ -2,8 +2,8 @@ import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import ScrollToTop from 'react-router-scroll-top';
 const defaultPage = React.lazy(() => import('./app/pages/custommer-page/default-pages/defaultPage'));
-const LoginPage = React.lazy(() => import('./app/pages/login-page/LoginPage'));
-const LoginTestPage = React.lazy(() => import('./app/components/register/login/Login'));
+const LoginNghiaPage = React.lazy(() => import('./app/pages/login-page/LoginPage'));
+const LoginPage = React.lazy(() => import('./app/components/register/login/Login'));
 const Register = React.lazy(() => import('./app/components/register/register/Register'));
 const AdminRouter = React.lazy(() => import('./app/components/admin/AdminRouter'));
 
@@ -22,14 +22,14 @@ function App() {
       <ScrollToTop>
         <React.Suspense fallback={loading}>
           <Switch>
+            <Route path={"/loginNghia"} exact component={LoginNghiaPage} />
             <Route path={"/login"} exact component={LoginPage} />
-            <Route path={"/loginTest"} exact component={LoginTestPage} />
             <Route path={"/register"} exact component={Register} />
             <Route path={"/admin"} component={AdminRouter} />
             <Route path={"/"} component={defaultPage} />
            
 
-            <LoginTestPage check={()=> checkConnect()} />
+            <LoginPage check={()=> checkConnect()} />
           </Switch>
         </React.Suspense>
       </ScrollToTop>

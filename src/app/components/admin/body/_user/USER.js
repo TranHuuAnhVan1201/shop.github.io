@@ -80,9 +80,9 @@ function USER(props) {
     }
     function handleChange(event) {
         const { name, value } = event.target;
-        console.log(edit);
         setEdit(edit => ({ ...edit, [name]: value }));
     }
+
     function handleChangeADD(event) {
         const { name, value } = event.target;
         setADD(add => ({ ...add, [name]: value }));
@@ -108,6 +108,7 @@ function USER(props) {
         setShowFormADD(false);
         setShowFormEDIT(false);
     }
+
     return (
         <section className="home-admin">
             <div className="home-left">
@@ -173,7 +174,7 @@ function USER(props) {
                             <input type="text" name="url" value={edit.url} onChange={handleChange} placeholder="Enter IMG Name"></input>
                             <input type="text" name="name" value={edit.name} onChange={handleChange} placeholder="Enter FULL Name"></input>
                             <input type="text" name="createdAt" value={edit.createdAt} onChange={handleChange} placeholder="Enter CREATED"></input>
-                            <button className="submit" >SUBMIT EDIT</button>
+                            <button className="submit">SUBMIT EDIT</button>
                             <button className="submit" onClick={handleCancel}>Cancel</button>
                         </form>
                     </div>

@@ -1,8 +1,31 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './../css/register.css';
 
+// bài login
 function Login(props) {
+    const api = axios.create({
+        baseURL: `http://phucnb-django-example.herokuapp.com/api/user/auth/login`
+    })
+    const loginUser = async () => {
+        let url = '/';
+        let res = await api.post(url, inputs)
+            .then(res => {
+                console.log(res);
+                console.log(res.data.access);
+                localStorage.setItem('token', res.data.access);
+            })
+            .catch(err => {
+                console.log('khoong dudsng');
+                console.log(err);
+            });
+        
+    }
+
+
+
+
     // Bước 1: khai báo State - gồm 2 phần tử input và setInput.
     // Bước 2: khai báo inputs = {} object.
     // Bước 3: function handleChange(e), nhận 2 trường name, value;
@@ -22,8 +45,11 @@ function Login(props) {
     function handleSubmit(event) {
         event.preventDefault();
         setSubmitted(true);
-        if(username && password) {
-            (username === 'admin') ? alert('admin') : alert('quest');
+        if (username && password) {
+            alert('submit thanh cong');
+            setInputs(inputs);
+            console.log(inputs);
+            loginUser();
         }
 
     }
