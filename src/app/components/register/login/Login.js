@@ -1,31 +1,26 @@
 import axios from 'axios';
+import jwtDecode from 'jwt-decode';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './../css/register.css';
-
-// bài login
 function Login(props) {
     const api = axios.create({
         baseURL: `http://phucnb-django-example.herokuapp.com/api/user/auth/login`
-    })
+    });
+    let history = useHistory();
     const loginUser = async () => {
-        let url = '/';
-        let res = await api.post(url, inputs)
+        let res = await api.post('/', inputs)
             .then(res => {
-                console.log(res);
-                console.log(res.data.access);
-                localStorage.setItem('token', res.data.access);
+                const token = res.data.access;
+                let decoded = jwtDecode(token);
+                (decoded.role === 'admin') ? props.history.push('/admin/user') : props.history.push('/carts');
+                localStorage.setItem("token", token);   
             })
             .catch(err => {
-                console.log('khoong dudsng');
                 console.log(err);
             });
         
-    }
-
-
-
-
+    };
     // Bước 1: khai báo State - gồm 2 phần tử input và setInput.
     // Bước 2: khai báo inputs = {} object.
     // Bước 3: function handleChange(e), nhận 2 trường name, value;
@@ -46,13 +41,14 @@ function Login(props) {
         event.preventDefault();
         setSubmitted(true);
         if (username && password) {
-            alert('submit thanh cong');
             setInputs(inputs);
             console.log(inputs);
             loginUser();
+            
         }
-
     }
+
+
     return (
         <div className="container">
             <form id="form-login" className="form" onSubmit={handleSubmit}>
@@ -73,7 +69,7 @@ function Login(props) {
             <div className="group">
                 <Link to="/" className="btn-link">Back</Link>
                 <Link to="/register" className="btn-link">Register</Link>
-               
+                
             </div>
         </div>
 

@@ -33,7 +33,8 @@ function Header(props) {
                             <li><Link to="/pay">Trả góp</Link></li>
                             <li><Link to="/contact">Liên hệ</Link></li>
                             <li><Link to="/new">Tin tức</Link></li>
-                            <li><Link to="/logintest">HOTLINE: 0972 197 029</Link></li>
+                            <li><Link to="/login">Đăng nhập</Link></li>
+                            <li><Link to="/register">Đăng ký</Link></li>
                         </div>
                     </div>
                 </nav>

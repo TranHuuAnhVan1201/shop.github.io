@@ -5,11 +5,12 @@ const login = React.lazy(() => import('../../components/login/Login'));
 
 function LoginPage(props) {
     return (
+        
         <HashRouter>
             <ScrollToTop>
                 <React.Suspense>
                     <Switch>
-                        <Route path={"/login"} component={login} />
+                        <Route path={"/login2"} component={login} />
                     </Switch>
                 </React.Suspense>
             </ScrollToTop>

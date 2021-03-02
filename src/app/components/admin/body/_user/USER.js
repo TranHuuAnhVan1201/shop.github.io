@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../scss/HomeAdmin.scss';
 import axios from 'axios';
 import Pagination from '../_pagination/Pagination';
+import '../scss/HomeAdmin.scss';
 function USER(props) {
     const api = axios.create({
         baseURL: `https://5fec7ae2595e420017c2be4d.mockapi.io/productjs`
